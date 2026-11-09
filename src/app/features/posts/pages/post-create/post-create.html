@@ -1,0 +1,45 @@
+<hlm-card class="w-full md:min-w-lg lg:min-w-3xl lg:max-w-3xl">
+  <hlm-card-header>
+    <h3 hlmCardTitle>Создание поста</h3>
+  </hlm-card-header>
+  <div hlmCardContent>
+    <form id="postForm" [formGroup]="postForm" (ngSubmit)="onSubmit()">
+      <hlm-field-group>
+        <hlm-field>
+          <hlm-field-label for="title">Заголовок поста</hlm-field-label>
+          <input id="title" hlmInput type="text" required formControlName="title" placeholder="Новая запись" />
+          <hlm-field-error validator="required">Заголовок обязателен к заполнению</hlm-field-error>
+          <hlm-field-error validator="minlength">Минимальная длина заголовка - 3 символа</hlm-field-error>
+        </hlm-field>
+        <hlm-field>
+          <hlm-field-label for="content">Содержание</hlm-field-label>
+          <hlm-input-group>
+            <textarea
+              id="content"
+              hlmInputGroupTextarea
+              required
+              formControlName="content"
+              placeholder="Lorem ipsum dolor sit amet...">
+            </textarea>
+            <hlm-input-group-addon align="block-end">
+              <hlm-input-group-text class="text-muted-foreground">
+                Минимум 10 символов
+              </hlm-input-group-text>
+            </hlm-input-group-addon>
+          </hlm-input-group>
+          <hlm-field-error validator="required">Содержание обязательно к заполнению</hlm-field-error>
+          <hlm-field-error validator="minlength">Минимальная длина содержания - 10 символов</hlm-field-error>
+        </hlm-field>
+        <hlm-field>
+          <hlm-field-label for="author">Автор</hlm-field-label>
+          <input id="author" hlmInput type="text" required formControlName="author" placeholder="John Doe" />
+          <hlm-field-error validator="required">Автор обязателен к заполнению</hlm-field-error>
+          <hlm-field-error validator="minlength">Минимальная длина имени автора - 2 символа</hlm-field-error>
+        </hlm-field>
+      </hlm-field-group>
+    </form>
+  </div>
+  <hlm-card-footer>
+    <button hlmBtn type="submit" form="postForm">Создать</button>
+  </hlm-card-footer>
+</hlm-card>
