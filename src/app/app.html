@@ -1,1 +1,14 @@
-<router-outlet />
+<div class="flex flex-col min-h-dvh">
+  <header class="sticky top-0 z-50 flex justify-between items-center px-4 py-2 bg-primary">
+    <h1 class="text-secondary">БлоGG</h1>
+    <button hlmBtn variant="outline">
+      Создать запись
+    </button>
+  </header>
+  <main class="flex-grow min-h-full flex flex-col items-center justify-center">
+    <router-outlet />
+  </main>
+  <footer class="flex justify-center items-center px-4 py-2 bg-sidebar-accent-foreground text-secondary">
+    <p>&copy; 2026</p>
+  </footer>
+</div>
