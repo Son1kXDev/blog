@@ -6,9 +6,10 @@ import { remixCloseLine } from '@ng-icons/remixicon';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {PostStorage} from '../../../../core/services/post-storage';
 import {MarkdownPipe} from '../../../../shared/pipes/markdown-pipe';
+import {HlmEmptyImports} from '@spartan-ng/helm/empty';
 
 @Component({
-  imports: [...HlmCardImports, ...HlmButtonImports, DatePipe, NgIcon, MarkdownPipe],
+  imports: [...HlmCardImports, ...HlmButtonImports, DatePipe, NgIcon, MarkdownPipe, HlmEmptyImports],
   providers: [provideIcons({ remixCloseLine })],
   selector: 'app-post-feed',
   styleUrl: './post-feed.css',

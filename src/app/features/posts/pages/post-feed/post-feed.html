@@ -25,8 +25,13 @@
         </hlm-card-footer>
       </hlm-card>
     } @empty {
-      <div class="flex flex-col h-full items-center justify-center">
-        <p>Здесь пока нет записей</p>
-      </div>
+      <hlm-empty>
+        <hlm-empty-header>
+          <p hlmEmptyTitle>Здесь пока нет записей</p>
+        </hlm-empty-header>
+        <hlm-empty-content>
+          <a hlmBtn variant="outline" href="/create">Создать первую запись</a>
+        </hlm-empty-content>
+      </hlm-empty>
     }
   </div>
