@@ -17,8 +17,8 @@
             <ng-icon name="remixCloseLine" />
           </button>
         </hlm-card-header>
-        <div hlmCardContent>
-          {{post.content}}
+        <div hlmCardContent class="markdown">
+          <div [innerHTML]="post.content | markdown"></div>
         </div>
         <hlm-card-footer>
           <p>{{post.author}}</p>

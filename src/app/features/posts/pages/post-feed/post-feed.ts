@@ -5,9 +5,10 @@ import {DatePipe} from '@angular/common';
 import { remixCloseLine } from '@ng-icons/remixicon';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {PostStorage} from '../../../../core/services/post-storage';
+import {MarkdownPipe} from '../../../../shared/pipes/markdown-pipe';
 
 @Component({
-  imports: [...HlmCardImports, ...HlmButtonImports, DatePipe, NgIcon],
+  imports: [...HlmCardImports, ...HlmButtonImports, DatePipe, NgIcon, MarkdownPipe],
   providers: [provideIcons({ remixCloseLine })],
   selector: 'app-post-feed',
   styleUrl: './post-feed.css',
