@@ -33,7 +33,7 @@ export class PostCreate {
   postForm = new FormGroup({
     title: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required, Validators.minLength(3)]}
+      validators: [Validators.required, Validators.minLength(3), Validators.maxLength(50)]}
     ),
     content: new FormControl('', {
       nonNullable: true,
@@ -41,7 +41,7 @@ export class PostCreate {
     ),
     author: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required, Validators.minLength(2)]}
+      validators: [Validators.required, Validators.minLength(2), Validators.maxLength(20)]}
     ),
   });
 

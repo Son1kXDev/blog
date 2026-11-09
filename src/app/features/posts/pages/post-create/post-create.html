@@ -10,6 +10,7 @@
           <input id="title" hlmInput type="text" required formControlName="title" placeholder="Новая запись" />
           <hlm-field-error validator="required">Заголовок обязателен к заполнению</hlm-field-error>
           <hlm-field-error validator="minlength">Минимальная длина заголовка - 3 символа</hlm-field-error>
+          <hlm-field-error validator="maxlength">Максимальная длина заголовка - 50 символов</hlm-field-error>
         </hlm-field>
         <hlm-field-label for="content">Содержание</hlm-field-label>
           <hlm-field>
@@ -50,6 +51,7 @@
           <input id="author" hlmInput type="text" required formControlName="author" placeholder="John Doe" />
           <hlm-field-error validator="required">Автор обязателен к заполнению</hlm-field-error>
           <hlm-field-error validator="minlength">Минимальная длина имени автора - 2 символа</hlm-field-error>
+          <hlm-field-error validator="maxlength">Минимальная длина имени автора - 20 символов</hlm-field-error>
         </hlm-field>
       </hlm-field-group>
     </form>
